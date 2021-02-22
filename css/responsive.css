@@ -1,0 +1,33 @@
+@media screen and (max-width: 1000px){
+    .price-components{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .price-components{
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "left-footer"
+            "right-footer";
+        grid-template-rows: 1fr 0.8fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    header{
+        padding: 2em 1.5em;         
+    }
+    header > p{
+        width: 100%;
+        font-size: 13px;
+    }
+    .left-footer {
+        padding: 2em 1.5em;
+        border-radius: 0 0 0 0;
+    }
+    .right-footer {
+        padding: 2em 1.5em;
+        border-radius: 0 0 5px 5px;
+    }
+}

@@ -1,0 +1,148 @@
+:root {
+  --cyan: #2ab2af;
+  --bright-yellow: #c0df34;
+  --Light-Gray: #e5eff5;
+  --Grayish-Blue: #98a6bd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Gray);
+  overflow: hidden;
+  padding: 50px 30px;
+}
+
+.price-components{
+  width: 50%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "left-footer right-footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.3fr;
+  border-radius: 5px;
+}
+
+/* area header */
+header {
+  grid-area: header;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header > h2 {
+  color: var(--cyan);
+  margin-bottom: 24px;
+}
+
+header > h4 {
+  color: var(--bright-yellow);
+  margin-bottom: 12px;
+}
+
+header > p {
+  width: 90%;
+  color: var(--Grayish-Blue);
+  line-height: 1.7;
+}
+
+/* area footer kiri */
+.left-footer {
+  grid-area: left-footer;
+  background-color: var(--cyan);
+  border-radius: 0 0 0 5px;
+  color: white;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-footer > h4 {
+  font-size: 20px;
+}
+
+.price {
+  line-height: 1.5;
+}
+
+.left-footer .price > h1 {
+  font-size: 32px;
+}
+
+.left-footer .price > h1 span {
+  font-size: 18px;
+  font-weight: normal;
+  opacity: 0.4;
+  margin-left: 6px;
+}
+
+.left-footer .price > p {
+  opacity: 0.8;
+}
+
+.left-footer button {
+  color: #e8f0c8;
+  outline: none;
+  padding: 16px;
+  width: 100%;
+  background-color: var(--bright-yellow);
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* area footer kanan */
+.right-footer {
+  grid-area: right-footer;
+  background-color: var(--cyan);
+  border-radius: 0 0 5px 0;
+  color: white;
+  opacity: 0.8;
+  padding: 36px;
+}
+
+.right-footer > h4 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.right-footer > p {
+  width: 80%;
+  line-height: 1.5;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+/* site footer */
+.site-footer {
+  font-size: 11px;
+  text-align: center;
+  background-color: #59bbb6;
+  padding: 10px;
+  font-size: 14px;
+  position: relative;
+}
+
+.site-footer a {
+  color: hsl(228, 45%, 44%);
+}
